@@ -1,0 +1,23 @@
+services:
+  # Backend API + WebSocket Service
+  - type: web
+    name: syncro-prime-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: NODE_ENV
+        value: production
+
+  # Frontend Static Site
+  - type: web
+    name: syncro-prime-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
