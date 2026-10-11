@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#06070d" />
+    <meta name="description" content="SYNCRO PRIME: AI-Powered Multi-Sport Fan Companion with Live Stoppage Gamification, Telemetry Overlays & Dynamic Personas" />
+    <title>SYNCRO PRIME | AI Live Sports Companion</title>
+    
+    <!-- Google Fonts: Orbitron, Outfit, Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              space: {
+                void: '#030407',
+                base: '#06070d',
+                card: '#0c0f1a',
+                surface: '#121626',
+                border: 'rgba(255, 255, 255, 0.08)'
+              },
+              neon: {
+                cyan: '#00f0ff',
+                purple: '#9d4edd',
+                ember: '#ff0055',
+                gold: '#ffb703',
+                green: '#00ff88'
+              }
+            },
+            fontFamily: {
+              display: ['Orbitron', 'monospace', 'sans-serif'],
+              heading: ['Outfit', 'sans-serif'],
+              sans: ['Inter', 'Outfit', 'sans-serif'],
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-[#06070d] text-slate-100 antialiased selection:bg-cyan-500 selection:text-black overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
