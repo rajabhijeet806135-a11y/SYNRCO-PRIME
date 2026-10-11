@@ -19,6 +19,10 @@ from app.api.routers.offline_router import router as offline_router
 from app.api.routers.clan_router import router as clan_router
 from app.api.routers.match_router import router as match_router
 from app.api.routers.historical_router import router as historical_router
+<<<<<<< HEAD
+from app.api.routers.camera_router import router as camera_router
+=======
+>>>>>>> origin/main
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -60,6 +64,10 @@ app.include_router(offline_router)
 app.include_router(clan_router)
 app.include_router(match_router)
 app.include_router(historical_router)
+<<<<<<< HEAD
+app.include_router(camera_router)
+=======
+>>>>>>> origin/main
 
 # WebSocket Real-Time Gateway
 @app.websocket("/ws")
