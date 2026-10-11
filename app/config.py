@@ -20,11 +20,16 @@ class Config:
     VLM_CACHE_TTL_MS: int = 500  # 500ms TTL per architecture spec
     TELEMETRY_CACHE_TTL_MS: int = 200
 
+<<<<<<< HEAD
     # Settlement & Durability Database Configuration
     ROOT_DIR: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     DB_DIR: str = os.getenv("DB_DIR", os.path.join(ROOT_DIR, "database"))
     DB_FILE: str = os.getenv("DB_FILE", os.path.join(DB_DIR, "syncro_prime_ledger.sqlite"))
     MATCHES_DB_FILE: str = os.getenv("MATCHES_DB_FILE", os.path.join(DB_DIR, "matches_telemetry.db"))
+=======
+    # Settlement & Durability
+    DB_FILE: str = os.getenv("DB_FILE", "./syncro_prime_ledger.sqlite")
+>>>>>>> origin/main
     SETTLEMENT_BATCH_INTERVAL_MS: int = 1000  # 1000ms background DB batch cycle
     SETTLEMENT_SLA_TARGET_MS: int = 100  # Sub-100ms UX settlement target
 
